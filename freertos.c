@@ -8,17 +8,7 @@
  *            - led_task     LED 状态指示 (100ms 周期)
  *            - com_task     无线通讯 (10ms 周期, 100Hz)
  *
- *          原 FreeRTOS Native API → CMSIS OS v2 映射:
- *            xTaskCreate()         → osThreadNew()
- *            TaskHandle_t          → osThreadId_t
- *            vTaskStartScheduler() → osKernelStart()
- *            vTaskDelayUntil()     → osDelayUntil()
- *            vTaskDelay()          → osDelay()
- *            ulTaskNotifyTake()    → osThreadFlagsWait()
- *            xTaskNotifyGive()     → osThreadFlagsSet()
- *            xTaskGetTickCount()   → osKernelGetTickCount()
- *            portMAX_DELAY         → osWaitForever
- *
+
  *          STM32F103C8T6 SRAM 20KB → 分配 12KB 给 RTOS 堆
  */
 
